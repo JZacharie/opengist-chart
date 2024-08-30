@@ -1,2 +1,1 @@
 # opengist-chart
-# opengist-chart
