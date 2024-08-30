@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opengist
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opengist
+  template:
+    metadata:
+      labels:
+        app: opengist
+    spec:
+      containers:
+        - name: opengist
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.service.ports.http }}
+            - containerPort: {{ .Values.service.ports.ssh }}
+          volumeMounts:
+            - name: opengist-data
+              mountPath: /opengist
+      volumes:
+        - name: opengist-data
+          persistentVolumeClaim:
+            claimName: opengist-data-pvc
