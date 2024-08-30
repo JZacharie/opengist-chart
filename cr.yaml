@@ -7,7 +7,7 @@ helm:
   chartDirs:
     - .
 github:
-  token: ${{ secrets.GITHUB_TOKEN }}
+  token: ${{ secrets.CR_TOKEN }}
   pagesBranch: gh-pages
   userName: jzacharie
   userEmail: joseph@zacharie.org
