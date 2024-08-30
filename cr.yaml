@@ -12,3 +12,5 @@ github:
   pagesBranch: gh-pages
   userName: jzacharie
   userEmail: joseph@zacharie.org
+env:
+  CR_TOKEN: "${{ secrets.CR_TOKEN }}"
