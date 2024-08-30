@@ -20,3 +20,5 @@ jobs:
       uses: helm/chart-releaser-action@v1.6.0
       with:
         config: '${{ github.workspace }}/cr.yaml'
+      env:
+        CR_TOKEN: "${{ secrets.CR_TOKEN }}"
