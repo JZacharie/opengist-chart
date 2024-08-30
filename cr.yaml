@@ -1,0 +1,13 @@
+packagesDir: ./charts
+outputDir: ./release
+chartsRepo:
+  git: github.com/JZacharie/opengist-chart.git
+  branch: main
+helm:
+  chartDirs:
+    - .
+github:
+  token: ${{ secrets.GITHUB_TOKEN }}
+  pagesBranch: gh-pages
+  userName: jzacharie
+  userEmail: joseph@zacharie.org
