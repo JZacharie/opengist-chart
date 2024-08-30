@@ -8,6 +8,7 @@ helm:
     - .
 github:
   token: ${{ secrets.CR_TOKEN }}
+  cr_token: ${{ secrets.CR_TOKEN }}
   pagesBranch: gh-pages
   userName: jzacharie
   userEmail: joseph@zacharie.org
